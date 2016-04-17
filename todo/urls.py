@@ -1,13 +1,13 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 # Import main view
 from todo.views import Home
 
-urlpatterns = patterns('',
+urlpatterns = [
 
     # Main page
-    url( r'^$', Home.as_view() ),
+    url(r'^$', Home.as_view()),
 
     # Include API URLs
-	url( r'^api/', include( 'api.urls' ) ),
-)
+    url(r'^api/', include('api.urls')),
+]

@@ -19,7 +19,7 @@ $ git clone https://github.com/AxiaCore/todomvc-django.git
 $ pip install -U -r requirements.txt
 
 # Sync database
-$ ./manage.py syncdb
+$ ./manage.py migrate --run-syncdb
 
 # Run the server
 $ ./manage.py runserver

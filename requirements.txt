@@ -1,5 +1,2 @@
-# Framework
-Django==1.6.1
-
-# Libs 
-djangorestframework==2.3.13
+Django==1.9.5
+djangorestframework==3.3.3
