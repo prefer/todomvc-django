@@ -22,18 +22,30 @@ SECRET_KEY = '66q!rmq+p*)(6v8$$ft+8p^e4l%bbv=e$vs15=hav$%z(foanq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
-# Templates
-TEMPLATE_DIRS = (
-    BASE_DIR + '/templates/',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(os.path.dirname(BASE_DIR), 'todomvc-backbone',
+                         'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 # Static files dir
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(os.path.dirname(BASE_DIR), 'todomvc-backbone'),
 )
 
 # Application definition
