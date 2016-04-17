@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 
 # Import main view
-from todo.views import Home
+from todomvc_django.views import Home
 
 urlpatterns = [
 
